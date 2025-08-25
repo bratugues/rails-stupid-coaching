@@ -1,0 +1,23 @@
+<div class="container">
+
+  <h1>Stupid Coaching</h1>
+
+  <div class="question mb-2">
+    <h3><%=@answer%></h3>
+    <p>-You</p>
+  </div>
+
+  <div class="answer mb-3">
+    <h3><%if @answer == "I am going to work"%>
+      <%="Great!"%>
+    <%elsif @answer.end_with?("?")%>
+      <%="Silly question, get dressed and go to work!"%>
+    <%else%>
+      <%="I don't care, get dressed and go to work!"%>
+    <%end%>
+    </h3>
+    <p>-Your coach</p>
+  </div>
+
+  <%= link_to "Ask a new question", ask_path %>
+</div>
